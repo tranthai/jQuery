@@ -1,0 +1,29 @@
+<html>
+<header>
+	<title> -- jQuery-- </title>
+	<script src="jquery.js"></script>
+	<style>
+		.abs {
+			width: 300px;
+			height: 300px;
+			background-color: #000;
+		}
+	</style>
+	<script>
+		$(window).bind("load resize", function() {
+			var win = $(window);
+			var box = $(".abs");
+			var top = ( win.height() - box.height() ) /2;
+			var left = ( win.width() - box.width() ) /2;
+			$(".abs").css({
+				"position": "absolute",
+				"top": top,
+				"left": left
+			});
+		});
+	</script>
+</header>
+<body>
+	<div class="abs"><div>
+</body>
+</html>
